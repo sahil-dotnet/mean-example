@@ -1,0 +1,57 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+
+  <title>Starter Node and Angular</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+  <!-- JS -->
+  <script src="js/angular/angular.js"></script>
+  <script src="js/angular-route/angular-route.min.js"></script>
+
+  <!-- ANGULAR CUSTOM -->
+  <script src="js/appRoutes.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/MainCtrl.js"></script>
+  <script src="js/controllers/SearchCtrl.js"></script>
+  <script src="js/services/SearchService.js"></script>
+</head>
+<body ng-app="SearchWebApp" ng-controller="SearchController">
+
+
+<header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Enter the text you want to search for !! </h1>
+          </div>
+          <div class="col-md-8 col-md-offset-2 ">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-12" style=" margin: 0px 0px 20px; ">
+                 <input placeholder="Please type the text" class="form-control" ng-model="search_string">
+                </div>
+                <div class="col-12 col-md-12 text-center">
+                 <button ng-click=search()>Search</button>
+                 <button ng-click=getSearchedKeywords()>Search Results</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div ng-view></div>
+
+
+</body>
+</html>
