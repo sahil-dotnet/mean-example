@@ -20,9 +20,13 @@ $scope.requesting = false;
 
     $scope.getSearchedKeywords = function(){
         SearchService.fetchList().then(function(res){
-            alert(JSON.stringify(res.data.message));
-            $scope.requesting = false;
+//            alert(JSON.stringify(res.data.message));
+            $scope.imageQuote = res.data.message;
         })
+    }
+
+    $scope.showFiles = function(toDo){
+        $scope.imagesShow = toDo.images;
     }
 
 });

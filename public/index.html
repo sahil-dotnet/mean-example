@@ -39,8 +39,21 @@
                 </div>
                 <div class="col-12 col-md-12 text-center">
                  <button ng-click=search()>Search</button>
-                 <button ng-click=getSearchedKeywords()>Search Results</button>
+                 <button ng-click=getSearchedKeywords()>Get Search History</button>
                 </div>
+              </div>
+              <div>
+                
+                <div ng-repeat="todo in imageQuote">                   
+                 <div><a style="cursor: pointer;" data-ng-click="showFiles(todo)">{{todo.query}}</a></div>
+
+                </div>
+
+                <div ng-repeat="image in imagesShow">                
+                <img src={{image}}>                
+                </div>             
+
+
               </div>
             </form>
           </div>
